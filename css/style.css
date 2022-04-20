@@ -1,0 +1,113 @@
+*{
+box-sizing: border-box;
+}
+body{
+  background-color: rgba(19, 17, 26, 0.219);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.console{
+  border: 2px solid black;
+  margin: 5px;
+  display: grid; 
+  position: relative;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto ;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto  ;
+}
+.console>div{
+ border: 0.01vh solid #ffffff ;
+}
+.update{
+  border: 1px solid black;
+  margin: 5px;
+  height: 98%;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 60% 20% 20%;
+}
+.controls{
+  height: 100px;
+  width: 300px;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+
+}
+.controls>div{
+ font-size: large;
+ color: #ffffff;
+ text-align: center;
+} 
+.left, .right, .turn, .down{ 
+  border: 1px solid whitesmoke;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.green{
+  background-color: rgba(74, 156, 74, 0.671);
+  border-radius: 5px;
+}
+.red{
+  background-color: rgba(151, 8, 8, 0.582);
+}
+.instructions{
+  color: black;
+}
+.gameOver{
+  display: none;
+  border-radius: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 99, 71, 0.562);
+  width: 200px;
+  height: 70px;
+  font-size: 1.5rem;
+  padding: 5px;
+  text-align: center;
+  box-shadow: -1px -1px 2px 5px rgba(0, 0, 0, 0.185);
+}
+.gameOver>span{
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  padding: 4px;
+  border-radius: 10%;
+}
+.update button{
+  width: 70%;
+  border-radius: 20%;
+  outline: none;
+}
+.reset, .play, .left, .right, .turn, .down{
+  cursor: pointer;
+}
+@media (min-width: 750px) {
+  .container{
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .container{
+    width: 700px;
+    height: 700px;
+  }
+}
